@@ -24,7 +24,6 @@ namespace AccessibleFullBodyCalibrator
             public static void Postfix(FullBodyCalibratorDialog __instance, SyncRef<FullBodyCalibrator> ____calibrator)
             {
                 Slot s = __instance.Slot.Parent.AddSlot("Button");
-                s.AttachComponent<Grabbable>().Scalable.Value = true;
                 NeosButton b = s.AttachComponent<NeosButton>();
                 b.LocalPressed += (btn, data) => 
                 {
@@ -32,9 +31,11 @@ namespace AccessibleFullBodyCalibrator
                     typeof(FullBodyCalibrator).GetMethod("MapTrackers", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(____calibrator.Target, new object[] { });
                     s.Destroy();
                 };
-                b.LabelText = "Confirm Tracker Mapping";
-                s.PositionInFrontOfUser(float3.Backward, distance: 0.5f);
-                __instance.Slot.AttachComponent<DestroyProxy>().DestroyTarget.Value = s.ReferenceID;
+                b.LabelText = "Finish Tracker Calibration";
+                s.SetParent(__instance.Slot);
+                s.LocalPosition = new float3(0, -0.25f, 0);
+                s.LocalRotation = floatQ.Identity;
+                s.LocalScale = float3.One * 1.25f;
             }
         }
     }
