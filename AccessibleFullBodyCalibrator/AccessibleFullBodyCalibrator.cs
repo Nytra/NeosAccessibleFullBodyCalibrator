@@ -11,10 +11,10 @@ namespace AccessibleFullBodyCalibrator
         public override string Name => "AccessibleFullBodyCalibrator";
         public override string Author => "Nytra";
         public override string Version => "1.0.0";
-        public override string Link => "https://github.com/Nytra/NeosFullBodyCalibratorMod";
+        public override string Link => "https://github.com/Nytra/NeosAccessibleFullBodyCalibrator";
         public override void OnEngineInit()
         {
-            Harmony harmony = new Harmony("net.username.Template");
+            Harmony harmony = new Harmony("owo.Nytra.AccessibleFullBodyCalibrator");
             harmony.PatchAll();
         }
 		
