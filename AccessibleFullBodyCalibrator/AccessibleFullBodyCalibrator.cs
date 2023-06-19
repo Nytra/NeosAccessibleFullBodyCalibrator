@@ -10,7 +10,7 @@ namespace AccessibleFullBodyCalibrator
     {
         public override string Name => "AccessibleFullBodyCalibrator";
         public override string Author => "Nytra";
-        public override string Version => "1.0.0";
+        public override string Version => "1.0.1";
         public override string Link => "https://github.com/Nytra/NeosAccessibleFullBodyCalibrator";
         public override void OnEngineInit()
         {
