@@ -1,5 +1,7 @@
 # AccessibleFullBodyCalibrator
 
+![2023-10-21 15 28 02](https://github.com/Nytra/NeosAccessibleFullBodyCalibrator/assets/14206961/ba8a2dae-8956-46fd-b0fe-70973e2e5a99)
+
 A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that adds a button to the T-Pose Calibration step of the Full Body Calibrator to allow completing the step with only one controller.
 
 ## Installation
